@@ -1,0 +1,17 @@
+---
+
+- name: Download nodejs source
+  get_url: url=http://mirror.oam.rocks/nodejs/v{{ nodejs_version }}/node-v{{ nodejs_version }}.tar.gz dest=/tmp/node-v{{ nodejs_version }}.tar.gz
+
+- name: Unpack nodejs source
+  unarchive: src=/tmp/node-v{{ nodejs_version }}.tar.gz dest=/tmp copy=no
+
+- name: Configure nodejs
+  shell: ./configure > /dev/null chdir=/tmp/node-v{{ nodejs_version }}
+
+- name: Build nodejs
+  shell: make -j{{ ansible_processor_cores }} > /dev/null chdir=/tmp/node-v{{ nodejs_version }}
+
+- name: Install nodejs
+  shell: make install > /dev/null chdir=/tmp/node-v{{ nodejs_version }}
+  become: yes
