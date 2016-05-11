@@ -1,6 +1,8 @@
+---
+
 galaxy_info:
   author: Gunter Grodotzki
-  description: Install Node.js from source
+  description: Installs Node.js from source
   company: weheartwebsites UG
   license: MIT
   min_ansible_version: 2.0
@@ -17,9 +19,8 @@ galaxy_info:
     - jessie
     - wheezy
   galaxy_tags:
-  - system
-  - development
-  - php
-  - src
-
+    - system
+    - development
+    - php
+    - src
 dependencies: []
