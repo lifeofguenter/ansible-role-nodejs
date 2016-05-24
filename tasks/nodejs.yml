@@ -12,7 +12,7 @@
 
 - name: Add repository
   apt_repository: repo="{{ item }} https://deb.nodesource.com/node_4.x {{ ansible_distribution_release | lower }} main" state=present
-  with_items
+  with_items:
     - deb
     - deb-src
   become: yes
