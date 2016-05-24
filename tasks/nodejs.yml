@@ -3,23 +3,20 @@
 - name: Install prerequisites
   apt: name={{ item }} update_cache=yes cache_valid_time=3600
   with_items:
-    - make
-    - gcc
-    - g++
+    - apt-transport-https
   become: yes
 
-- name: Download nodejs source
-  get_url: url=http://mirror.oam.rocks/nodejs/v{{ nodejs_version }}/node-v{{ nodejs_version }}.tar.gz dest=/tmp/node-v{{ nodejs_version }}.tar.gz
+- name: Add apt-key
+  apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key state=present
+  become: yes
 
-- name: Unpack nodejs source
-  unarchive: src=/tmp/node-v{{ nodejs_version }}.tar.gz dest=/tmp copy=no
-
-- name: Configure nodejs
-  shell: ./configure > /dev/null chdir=/tmp/node-v{{ nodejs_version }}
-
-- name: Build nodejs
-  shell: make -j{{ ansible_processor_cores }} > /dev/null chdir=/tmp/node-v{{ nodejs_version }}
+- name: Add repository
+  apt_repository: repo="{{ item }} https://deb.nodesource.com/node_4.x {{ ansible_distribution_release | lower }} main" state=present
+  with_items
+    - deb
+    - deb-src
+  become: yes
 
 - name: Install nodejs
-  shell: make install > /dev/null chdir=/tmp/node-v{{ nodejs_version }}
+  apt: name=nodejs state=present
   become: yes
