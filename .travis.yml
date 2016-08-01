@@ -12,9 +12,7 @@ addons:
     - python-pip
 
 before_install:
-  # remove pre-installed nodejs
-  - "sudo apt-get remove --purge nodejs"
-  - "sudo apt-get autoremove --purge"
+  - "which node"
 
 install:
   # Install ansible
@@ -29,8 +27,8 @@ install:
 script:
   - ansible-playbook tests/test.yml -i tests/inventory --connection=local
   - ansible-playbook tests/test.yml -i tests/inventory --connection=local
-  - node --version
-  - npm --version
+  - /usr/bin/node --version
+  - /usr/bin/npm --version
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
