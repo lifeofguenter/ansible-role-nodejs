@@ -11,6 +11,11 @@ addons:
     packages:
     - python-pip
 
+before_install:
+  # remove pre-installed nodejs
+  - "sudo apt-get remove --purge nodejs"
+  - "sudo apt-get autoremove --purge"
+
 install:
   # Install ansible
   - pip install ansible
