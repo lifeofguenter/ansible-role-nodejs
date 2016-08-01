@@ -1,7 +1,7 @@
 ---
 
 - name: Get current nodejs version
-  command: node --version
+  command: /usr/bin/node --version
   register: nodejs_current
   ignore_errors: yes
 

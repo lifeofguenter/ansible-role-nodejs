@@ -11,9 +11,6 @@ addons:
     packages:
     - python-pip
 
-before_install:
-  - "which node"
-
 install:
   # Install ansible
   - pip install ansible
