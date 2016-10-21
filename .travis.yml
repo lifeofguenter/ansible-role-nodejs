@@ -15,11 +15,11 @@ install:
   # Install ansible
   - pip install ansible
 
-  # Check ansible version
-  - ansible --version
-
   # Create ansible.cfg with correct roles_path
   - printf '[defaults]\nvalidate_certs=False\nroles_path=../' > ansible.cfg
+
+  # Check ansible version
+  - ansible --version
 
 script:
   - ansible-playbook tests/test.yml -i tests/inventory --connection=local
