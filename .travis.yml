@@ -13,7 +13,7 @@ addons:
 
 install:
   # Install ansible
-  - pip install ansible
+  - pip install ansible urllib3 pyopenssl ndg-httpsclient pyasn1
 
   # Check ansible version
   - ansible --version
