@@ -1,10 +1,4 @@
 ---
 
-- name: Get current nodejs version
-  command: /usr/bin/node --version
-  register: nodejs_current
-  ignore_errors: yes
-
 - name: Install nodejs
   include: nodejs.yml
-  when: nodejs_current.rc != 0 or nodejs_current.stdout.find('v{{ nodejs_version }}') == -1
