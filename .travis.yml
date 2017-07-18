@@ -12,6 +12,7 @@ addons:
     - python-pip
 
 install:
+  - pip install urllib3 pyOpenSSL ndg-httpsclient pyasn1
   # Install ansible
   - pip install ansible
 
