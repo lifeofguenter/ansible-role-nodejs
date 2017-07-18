@@ -8,7 +8,7 @@
 
 - name: add yarn repository
   apt_repository:
-    repo: "deb https://dl.yarnpkg.com/{{ ansible_distribution | lower }}/ stable main"
+    repo: "deb https://dl.yarnpkg.com/debian/ stable main"
     state: present
   become: yes
 
