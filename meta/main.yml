@@ -2,10 +2,10 @@
 
 galaxy_info:
   author: Gunter Grodotzki
-  description: Installs Node.js from source
+  description: Install nodejs and yarn.
   company: weheartwebsites UG
   license: MIT
-  min_ansible_version: 2.0
+  min_ansible_version: 2.3
   platforms:
   - name: Ubuntu
     versions:
