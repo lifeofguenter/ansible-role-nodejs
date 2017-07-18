@@ -12,7 +12,6 @@ addons:
     - python-pip
 
 install:
-  - pip install urllib3[secure]
   # Install ansible
   - pip install ansible
 
