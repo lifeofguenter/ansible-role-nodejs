@@ -2,7 +2,7 @@
 
 # Ansible Role for Node.js
 
-This ansible role will install Node.js from source.
+This ansible role will install Node.js + yarn.
 
 ## Requirements
 
@@ -11,7 +11,7 @@ _None._
 ## Role Variables
 
 ```
-nodejs_version: 4.4.3
+nodejs_version: 6.x
 ```
 
 ## Dependencies
