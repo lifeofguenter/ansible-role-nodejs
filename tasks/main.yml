@@ -9,6 +9,6 @@
     - apt-transport-https
   become: yes
 
-- include: nodejs.yml
+- import_tasks: nodejs.yml
 
-- include: yarn.yml
+- import_tasks: yarn.yml
