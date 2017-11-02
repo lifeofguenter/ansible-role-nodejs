@@ -23,9 +23,13 @@ install:
 
 script:
   - ansible-playbook tests/test.yml -i tests/inventory --connection=local
+
   - ansible-playbook tests/test.yml -i tests/inventory --connection=local
+
   - /usr/bin/node --version
+
   - /usr/bin/npm --version
+
   - /usr/bin/yarn --version
 
 notifications:

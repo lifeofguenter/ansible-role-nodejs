@@ -6,21 +6,21 @@ This ansible role will install Node.js + yarn.
 
 ## Requirements
 
-_None._
+None
 
 ## Role Variables
 
-```
+```yaml
 nodejs_version: 8.x
 ```
 
 ## Dependencies
 
-_None_
+None
 
 ## Example Playbook
 
-```
+```yaml
 - hosts: nodejs
   roles:
     - { role: lifeofguenter.nodejs }
@@ -28,8 +28,9 @@ _None_
 
 ## License
 
-MIT
+Licensed under the MIT License. See the [LICENSE file](LICENSE) for details.
 
 ## Author Information
 
-Gunter Grodotzki <gunter@grodotzki.co.za>
+* [All contributors](https://github.com/lifeofguenter/ansible-role-nodejs/graphs/contributors)
+* [Gunter Grodotzki](https://lifeofguenter.de)

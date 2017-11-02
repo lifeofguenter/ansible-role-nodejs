@@ -2,23 +2,19 @@
 
 galaxy_info:
   author: Gunter Grodotzki
-  description: Install nodejs and yarn.
-  company: weheartwebsites UG
+  description: Install Node.js and Yarn.
+  company: 9JKH (Pty) Ltd.
   license: MIT
-  min_ansible_version: 2.3
+  min_ansible_version: 2.4
   platforms:
     - name: Ubuntu
       versions:
-        - trusty
-        - utopic
-        - vivid
-        - wily
         - xenial
+        - trusty
     - name: Debian
       versions:
         - stretch
         - jessie
-        - wheezy
   galaxy_tags:
     - system
     - development
