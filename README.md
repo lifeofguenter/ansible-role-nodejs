@@ -11,7 +11,7 @@ _None._
 ## Role Variables
 
 ```
-nodejs_version: 6.x
+nodejs_version: 8.x
 ```
 
 ## Dependencies
