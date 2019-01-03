@@ -2,7 +2,7 @@
 
 - name: add yarn apt-key
   apt_key:
-    id: 0x86E50310
+    id: 86E50310
     url: https://dl.yarnpkg.com/debian/pubkey.gpg
     state: present
   become: yes
