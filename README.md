@@ -1,22 +1,22 @@
 [![Build Status](https://travis-ci.org/lifeofguenter/ansible-role-nodejs.svg?branch=master)](https://travis-ci.org/lifeofguenter/ansible-role-nodejs)
 
-# Ansible Role for Node.js
+# lifeofguenter.nodejs
 
 This ansible role will install Node.js + yarn.
 
 ## Requirements
 
-None
+none
 
 ## Role Variables
 
 ```yaml
-nodejs_version: 8.x
+nodejs_version: 10.x
 ```
 
 ## Dependencies
 
-None
+none
 
 ## Example Playbook
 
