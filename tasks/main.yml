@@ -2,11 +2,9 @@
 
 - name: install prerequisites
   apt:
-    name: "{{ item }}"
+    name: apt-transport-https
     update_cache: yes
     cache_valid_time: 3600
-  with_items:
-    - apt-transport-https
   become: yes
 
 - import_tasks: nodejs.yml
